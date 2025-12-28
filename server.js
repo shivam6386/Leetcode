@@ -7,8 +7,11 @@ app.use(cookieParser());
 app.use(express.json());
 
 const connectDb  = require('./src/config/db');
+const authRouter = require('./routes/userAuth.js');
 
-app.use(express());
+app.use('/user',authRouter);
+
+
 
 require('dotenv').config();
 const Port=process.env.PORT
