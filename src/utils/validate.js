@@ -11,7 +11,9 @@ const registerValidation=function(data){
     if (!validator.isEmail(data.email)){
    throw new Error ('InValid Email');
     }
-   
+   if (!validator.isStrongPassword(data.password)){
+   throw new Error ('InValid Email');
+    }
 }
 
 module.exports=registerValidation;
