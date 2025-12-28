@@ -48,7 +48,7 @@ const userSchema = new mongoose.Schema(
     },
 
     problemSolved: {
-      type: [String], // ✅ fixed
+      type: [String], 
       default: [],
     },
   },
